@@ -221,7 +221,6 @@ body {
       .card__back {
         display: block;
         font-size: 1.5rem;
-        height: 75rem;
         width: 100%;
         border-radius: 5px;
         overflow: hidden;
@@ -249,7 +248,7 @@ body {
         padding: 2rem 1rem 1rem 1rem;
         text-align: center; }
       .card__back-details {
-        height: auto; }
+        height: 40rem; }
         .card__back-details ul {
           list-style: none;
           width: 80%;
@@ -267,7 +266,7 @@ body {
         position: absolute;
         bottom: 0;
         left: 0;
-        height: 25rem;
+        height: 20rem;
         width: 100%;
         padding-top: 5rem; }
       .card__back-cta {
@@ -859,6 +858,10 @@ header {
   background-size: cover;
   background-position: center;
   position: relative; }
+  @media only screen and (max-width: 37.75em) {
+    .instructors__picture {
+      position: static;
+      display: flex; } }
   .instructors__heading {
     color: #333333;
     font-size: 4rem;
@@ -886,7 +889,7 @@ header {
         top: 23%;
         left: 10%;
         transition: none;
-        width: 18rem;
+        width: 20rem;
         height: 30rem; } }
   .instructors__picture-2 {
     position: absolute;
@@ -933,7 +936,8 @@ header {
         text-align: left;
         visibility: visible;
         opacity: 1;
-        position: static; } }
+        width: 100%;
+        left: 150%; } }
   .instructors__caption {
     text-transform: uppercase;
     font-size: 2rem; }
