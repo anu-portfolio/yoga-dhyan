@@ -919,6 +919,8 @@ header {
   .instructors__img {
     object-fit: cover;
     width: 100%; }
+  .instructors__info-small {
+    display: none; }
   .instructors__info {
     color: #fff;
     position: absolute;
@@ -936,8 +938,8 @@ header {
         text-align: left;
         visibility: visible;
         opacity: 1;
-        width: 100%;
-        left: 150%; } }
+        width: 200%;
+        left: 200%; } }
   .instructors__caption {
     text-transform: uppercase;
     font-size: 2rem; }
@@ -949,7 +951,7 @@ header {
     filter: blur(3px) brightness(50%); }
     @media only screen and (max-width: 37.75em) {
       .instructors__picture:hover .instructors__shape {
-        transform: scale(1);
+        transform: none;
         filter: none; } }
   .instructors__picture:hover .instructors__info {
     visibility: visible;
