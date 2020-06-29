@@ -938,8 +938,8 @@ header {
         text-align: left;
         visibility: visible;
         opacity: 1;
-        width: 200%;
-        left: 200%; } }
+        width: 100%;
+        left: 150%; } }
   .instructors__caption {
     text-transform: uppercase;
     font-size: 2rem; }
