@@ -52,6 +52,14 @@ body {
   .btn--white::after {
     background: #fff; }
 
+.btn--white-small {
+  background: #fff;
+  color: #9cc5a1;
+  margin: 1rem 0 3rem 0;
+  font-weight: 600; }
+  .btn--white-small::after {
+    background: #fff; }
+
 .btn--pink {
   background: #ffa5ab;
   color: #fff;
@@ -121,6 +129,8 @@ body {
   perspective: 150rem;
   position: relative;
   height: 50rem; }
+  .card__back {
+    display: none; }
   .card__side {
     font-size: 1.5rem;
     height: 50rem;
@@ -176,7 +186,7 @@ body {
     text-align: center; }
     @media (max-width: 1000px) {
       .card__heading {
-        padding: 1rem; } }
+        padding: 2rem 1rem 1rem 1rem; } }
   .card__details {
     padding: 1rem; }
     .card__details ul {
@@ -207,51 +217,75 @@ body {
     font-weight: 600; }
   @media only screen and (max-width: 56.25em) {
     .card {
-      height: 70rem;
-      overflow: hidden;
-      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-      border-radius: 5px;
-      background: #fff; }
-      .card__picture {
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
-        clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
-        background-position: top;
-        height: 120px; }
-      .card__side {
-        height: auto;
-        box-shadow: none; }
-        .card__side--back {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          -ms-transform: rotateY(0);
-          -webkit-transform: rotateY(0);
-          -moz-transform: rotateY(0);
-          -o-transform: rotateY(0);
-          transform: rotateY(0);
-          -webkit-clip-path: polygon(0 70%, 50% 75%, 100% 70%, 100% 100%, 0 100%);
-          clip-path: polygon(0 70%, 50% 75%, 100% 70%, 100% 100%, 0 100%); }
-      .card:hover .card__side--front {
-        -ms-transform: rotateY(0);
-        -webkit-transform: rotateY(0);
-        -moz-transform: rotateY(0);
-        -o-transform: rotateY(0);
-        transform: rotateY(0); }
-      .card__cta {
-        position: relative;
-        top: 85%;
+      display: none; }
+      .card__back {
+        display: block;
+        font-size: 1.5rem;
+        height: 75rem;
         width: 100%;
-        padding: 1rem;
-        margin-top: 1rem; }
-      .card__price-box {
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+        background: #fff;
+        position: relative; }
+      .card__back-picture {
+        height: 20rem;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%); }
+        .card__back-picture--01 {
+          background-image: linear-gradient(to right bottom, #9cc5a1, #ffa5ab), url(../img/card-1.jpg); }
+        .card__back-picture--02 {
+          background-image: linear-gradient(to right bottom, #9cc5a1, #ffa5ab), url(../img/card-2.jpg); }
+        .card__back-picture--03 {
+          background-image: linear-gradient(to right bottom, #9cc5a1, #ffa5ab), url(../img/card-3.jpg); }
+      .card__back-heading {
+        color: #9cc5a1;
+        text-transform: uppercase;
+        font-size: 2rem;
+        padding: 2rem 1rem 1rem 1rem;
+        text-align: center; }
+      .card__back-details {
+        height: auto; }
+        .card__back-details ul {
+          list-style: none;
+          width: 80%;
+          margin: 0 auto; }
+          .card__back-details ul li {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 1rem; }
+            .card__back-details ul li:not(:last-child) {
+              border-bottom: 1px solid #eee; }
+      .card__back-bottom {
+        background-image: linear-gradient(to right bottom, #9cc5a1, #ffa5ab);
+        -webkit-clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 100%, 0 100%);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 25rem;
+        width: 100%;
+        padding-top: 5rem; }
+      .card__back-cta {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%; }
+      .card__back-price-box {
+        color: #fff;
         margin-bottom: 1rem; }
-      .card__price-per {
-        margin-top: 1rem;
+      .card__back-price-per {
+        font-size: 1.4rem;
+        text-transform: uppercase; }
+      .card__back-price-value {
+        font-size: 4rem;
+        font-weight: 600;
         margin-bottom: 0; }
-      .card__price-value {
-        font-size: 3rem; }
       .card .btn--white {
-        margin: 1rem 0; } }
+        margin: 0; } }
 
 .popup {
   height: 100vh;
@@ -553,7 +587,7 @@ header {
 
 .programs__container {
   position: relative;
-  margin: 7rem;
+  margin: 7rem auto;
   width: 80%;
   height: 80vh; }
   @media only screen and (max-width: 56.25em) {
